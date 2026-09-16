@@ -1,6 +1,6 @@
 # Ruta por Andalucía · octubre 2026
 
-Planificador interactivo y responsive para una ruta por Málaga, Ronda, Sevilla, Córdoba, Granada, Jaén/Baeza/Úbeda y Manzanares.
+Planificador interactivo y responsive para nuestra ruta por Málaga, Ronda, Sevilla, Córdoba, Granada, Baeza/Úbeda y Manzanares. Los dos últimos días se mantienen ligeros, dedicados al traslado y al descanso.
 
 ## Funciones
 
