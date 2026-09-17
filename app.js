@@ -3,49 +3,50 @@ const maps = (query) => `https://www.google.com/maps/search/?api=1&query=${encod
 const tripDays = [
   {
     id: 1, date: "3", weekday: "Sáb", city: "Málaga", sleep: "Málaga", theme: "Mar, piedra y primera tapa",
-    summary: "Empezamos con calma: centro histórico, vistas desde la Alcazaba y cena malagueña. Si llegamos tarde, dejamos Gibralfaro para otra ocasión y priorizamos el paseo.",
+    summary: "Llegamos por la mañana, dejamos las cosas en el alojamiento y estrenamos el viaje comiendo en El Pimpi. Por la tarde visitamos la Alcazaba y terminamos paseando y cenando junto al puerto.",
     tags: ["Llegada", "Casco histórico", "Atardecer"],
     items: [
-      { time: "14:00", title: "Llegada y check-in", detail: "Dejamos el coche y entramos caminando al centro. La hora es provisional y podemos ajustarla al viaje.", link: maps("Centro Histórico Málaga") },
-      { time: "16:30", title: "Alcazaba + Gibralfaro", detail: "Empezamos por Gibralfaro y bajamos hacia la Alcazaba para evitar la subida final.", link: "https://alcazabaygibralfaro.malaga.eu/" },
-      { time: "19:15", title: "Muelle Uno y calle Larios", detail: "Paseamos sin objetivo entre el teatro romano, las palmeras, el puerto y nuestra primera caña.", link: maps("Muelle Uno Málaga") },
-      { time: "21:00", title: "Cena en El Pimpi", detail: "Terminamos en la parada que ya teníamos prevista. Reservamos si queremos terraza o una hora concreta.", link: "https://www.elpimpi.com/" }
+      { time: "11:00", title: "Llegamos y hacemos el check-in", detail: "Dejamos el coche y el equipaje, nos instalamos y entramos caminando al centro.", link: maps("Centro Histórico Málaga") },
+      { time: "14:30", title: "Comemos en El Pimpi", detail: "Empezamos el viaje con cocina malagueña junto al Teatro Romano. Reservamos si queremos una hora concreta.", link: "https://www.elpimpi.com/" },
+      { time: "17:00", title: "Visitamos la Alcazaba", detail: "Recorremos la fortaleza y sus jardines con calma; dejamos Gibralfaro como opción solo si todavía tenemos energía.", link: "https://alcazabaygibralfaro.malaga.eu/" },
+      { time: "20:00", title: "Paseamos y cenamos por Muelle Uno", detail: "Pasamos por la calle Larios y caminamos entre las palmeras y el puerto antes de cenar por la zona.", link: maps("Muelle Uno Málaga") }
     ]
   },
   {
     id: 2, date: "4", weekday: "Dom", city: "Ronda", sleep: "Ronda", theme: "El Tajo a nuestro ritmo",
-    summary: "Disfrutamos también de la carretera. Ronda gana mucho cuando baja el flujo de excursiones, así que dejamos los miradores y el barrio de San Francisco para el final de la tarde.",
+    summary: "Disfrutamos también de la carretera. Recorremos el Tajo y la ciudad vieja sin prisas y dejamos el atardecer frente al Puente Nuevo para cerrar el día antes de cenar.",
     tags: ["1 h 30 de coche", "Miradores", "Pueblo blanco"],
     items: [
       { time: "09:30", title: "Málaga → Ronda", detail: "Recorremos 102 km y dejamos 20 min de margen al llegar para aparcar.", link: maps("Málaga to Ronda") },
       { time: "11:30", title: "Puente Nuevo y balcones del Tajo", detail: "Pasamos por la plaza de España, la Alameda del Tajo y los miradores. Bajamos solo si nos apetece la caminata.", link: maps("Puente Nuevo Ronda") },
       { time: "14:00", title: "Almuerzo rondeño", detail: "Podemos elegir Bodega San Francisco para cocina sencilla o Tragatá para una versión contemporánea.", link: maps("Bodega San Francisco Ronda") },
-      { time: "16:30", title: "Ciudad vieja y Baños Árabes", detail: "Vemos la Casa del Rey Moro por fuera, las murallas, el barrio de San Francisco y los baños si están abiertos.", link: "https://turismoderonda.es/" },
-      { time: "19:00", title: "Atardecer frente al puente", detail: "Terminamos en el mirador de Aldehuela o la Cuesta de Santo Domingo para aprovechar la mejor luz.", link: maps("Mirador de Aldehuela Ronda") }
+      { time: "17:00", title: "Recorremos la ciudad vieja y los Baños Árabes", detail: "Vemos la Casa del Rey Moro por fuera, las murallas, el barrio de San Francisco y los baños si están abiertos.", link: "https://turismoderonda.es/" },
+      { time: "20:00", title: "Vemos el atardecer y cenamos", detail: "Terminamos en el mirador de Aldehuela o la Cuesta de Santo Domingo y después buscamos una cena rondeña.", link: maps("Mirador de Aldehuela Ronda") }
     ]
   },
   {
     id: 3, date: "5", weekday: "Lun", city: "Sevilla", sleep: "Sevilla", theme: "Campanas, naranjos y Triana",
-    summary: "Entramos en Sevilla por su eje monumental. Visitamos la Giralda con entrada horaria y, al caer la tarde, cruzamos el río hacia Triana.",
+    summary: "Llegamos directamente al eje monumental para visitar la Catedral y la Giralda. Después comemos por el centro, hacemos el check-in y enlazamos Santa Cruz con una noche de tapas en Triana.",
     tags: ["1 h 50 de coche", "Giralda", "Triana"],
     items: [
       { time: "09:30", title: "Ronda → Sevilla", detail: "Recorremos 129 km y salimos con margen para aparcar fuera del casco de Santa Cruz.", link: maps("Ronda to Sevilla") },
-      { time: "12:00", title: "Check-in y almuerzo ligero", detail: "Tomamos una tapa y descansamos un poco antes de la visita monumental.", link: maps("Centro Sevilla") },
-      { time: "15:30", title: "Catedral + Giralda", detail: "Reservamos una franja oficial y contamos 1 h 45–2 h para verla sin correr.", link: "https://www.catedraldesevilla.es/" },
+      { time: "12:00", title: "Visitamos la Catedral y la Giralda", detail: "Reservamos la franja oficial del mediodía y contamos 1 h 45–2 h para verlas sin correr.", link: "https://www.catedraldesevilla.es/" },
+      { time: "15:00", title: "Comemos por el centro", detail: "Elegimos una comida sevillana cerca del eje monumental antes de ir al alojamiento.", link: maps("Restaurantes centro Sevilla") },
+      { time: "17:00", title: "Hacemos el check-in", detail: "Dejamos el equipaje y descansamos unos minutos antes de volver a salir.", link: maps("Centro Sevilla") },
       { time: "18:00", title: "Santa Cruz y Torre del Oro", detail: "Pasamos por el Patio de Banderas, la calle Agua y el Archivo de Indias antes de pasear junto al Guadalquivir.", link: maps("Barrio Santa Cruz Sevilla") },
-      { time: "21:00", title: "Tapas en Triana", detail: "Cruzamos el puente y cenamos en barra, en Las Golondrinas o Bodeguita Romero.", link: maps("Las Golondrinas Triana Sevilla") }
+      { time: "21:00", title: "Tapeamos por Triana", detail: "Cruzamos el puente y cenamos en barra, en Las Golondrinas o Bodeguita Romero.", link: maps("Las Golondrinas Triana Sevilla") }
     ]
   },
   {
     id: 4, date: "6", weekday: "Mar", city: "Sevilla", sleep: "Sevilla", theme: "Palacios, azulejos y barrio",
-    summary: "Hacemos un día completo pero equilibrado: Real Alcázar temprano, sombra en María Luisa y una tarde libre para elegir entre Triana, Bellas Artes o flamenco.",
+    summary: "Hacemos un día completo pero equilibrado: Real Alcázar temprano, sombra en María Luisa, tapeo y una tarde libre para elegir nuestro rincón de Sevilla antes de cenar por la Judería.",
     tags: ["Sin coche", "Real Alcázar", "Plan flexible"],
     items: [
       { time: "09:00", title: "Real Alcázar", detail: "Elegimos la primera franja disponible para entrar con menos gente y reservamos 2–2½ horas.", link: "https://www.alcazarsevilla.org/" },
       { time: "12:15", title: "Plaza de España + María Luisa", detail: "Paseamos entre azulejos y jardines, aprovechando la sombra y la luz para las fotos.", link: maps("Plaza de España Sevilla") },
-      { time: "14:30", title: "Almuerzo de tapas", detail: "Vamos a Casa Morales si buscamos solera o a Eslava si preferimos tapas creativas con reserva.", link: maps("Casa Morales Sevilla") },
+      { time: "14:30", title: "Tapeamos por Sevilla", detail: "Vamos a Casa Morales si buscamos solera o a Eslava si preferimos tapas creativas con reserva.", link: maps("Casa Morales Sevilla") },
       { time: "18:00", title: "Elegimos nuestro Sevilla", detail: "Decidimos entre Triana y su cerámica, el Museo de Bellas Artes o las Setas al atardecer.", link: maps("Metropol Parasol Sevilla") },
-      { time: "21:30", title: "Cena o flamenco íntimo", detail: "Evitamos los paquetes con cena: preferimos un espectáculo corto y cenar por separado.", link: maps("Casa de la Memoria Sevilla") }
+      { time: "21:30", title: "Tapeamos por la Judería", detail: "Terminamos el día cenando de tapas por las calles próximas a Santa Cruz, sin una ruta rígida.", link: maps("Judería Sevilla tapas") }
     ]
   },
   {
@@ -57,20 +58,21 @@ const tripDays = [
       { time: "11:15", title: "Mezquita-Catedral", detail: "Compramos en el canal oficial y reservamos 1½ horas, sin depender de revendedores.", link: "https://mezquita-catedraldecordoba.es/" },
       { time: "13:00", title: "Judería y callejas", detail: "Pasamos por la Sinagoga, el Zoco, la calleja de las Flores y pequeñas plazas, sin convertir el paseo en una lista.", link: maps("Judería de Córdoba") },
       { time: "14:30", title: "Almuerzo cordobés", detail: "Salmorejo, flamenquín y berenjenas con miel en Taberna Salinas o Sociedad Plateros.", link: maps("Taberna Salinas Córdoba") },
-      { time: "17:30", title: "Patios de San Basilio", detail: "Paseamos por el Alcázar Viejo y comprobamos el horario propio de los patios que queramos visitar.", link: maps("San Basilio patios Córdoba") },
-      { time: "20:00", title: "Puente Romano al anochecer", detail: "Cruzamos hacia la Torre de la Calahorra y volvemos viendo la Mezquita iluminada.", link: maps("Puente Romano Córdoba") }
+      { time: "18:00", title: "Visitamos los patios de San Basilio", detail: "Paseamos por el Alcázar Viejo y comprobamos el horario propio de los patios que queramos visitar.", link: maps("San Basilio patios Córdoba") },
+      { time: "21:00", title: "Cruzamos el Puente Romano y cenamos", detail: "Caminamos hacia la Torre de la Calahorra, vemos la Mezquita iluminada y cenamos después por el centro.", link: maps("Puente Romano Córdoba") }
     ]
   },
   {
     id: 6, date: "8", weekday: "Jue", city: "Granada", sleep: "Granada", theme: "De la ciudad califal a la Alhambra",
-    summary: "Medina Azahara encaja aquí mejor que en el día anterior: la visitamos con energía, comemos en Córdoba y salimos hacia Granada con luz suficiente.",
-    tags: ["Medina Azahara", "2 h 15 de coche", "Mirador"],
+    summary: "Visitamos Medina Azahara por la mañana, volvemos a Córdoba para comer y conducimos hasta Granada. Después del check-in dejamos la tarde para patear el centro y cenar por allí.",
+    tags: ["Medina Azahara", "2 h 15 de coche", "Centro de Granada"],
     items: [
-      { time: "08:45", title: "Check-out hacia Medina Azahara", detail: "Conducimos unos 20 min desde Córdoba y tomamos la lanzadera en el centro de visitantes.", link: maps("Medina Azahara Córdoba") },
+      { time: "09:00", title: "Córdoba → Medina Azahara", detail: "Conducimos unos 20 min desde Córdoba y tomamos la lanzadera en el centro de visitantes.", link: maps("Medina Azahara Córdoba") },
       { time: "09:30", title: "Conjunto de Medina Azahara", detail: "Reservamos 2½–3 horas para el museo, la lanzadera y el yacimiento.", link: "https://www.juntadeandalucia.es/cultura/museos/CAMA/" },
-      { time: "13:00", title: "Último almuerzo en Córdoba", detail: "Comemos algo ligero antes de la carretera y confirmamos la apertura de la taberna elegida.", link: maps("Sociedad Plateros María Auxiliadora Córdoba") },
+      { time: "14:00", title: "Comemos en Córdoba", detail: "Volvemos a la ciudad para nuestra última comida cordobesa antes de la carretera.", link: maps("Sociedad Plateros María Auxiliadora Córdoba") },
       { time: "15:00", title: "Córdoba → Granada", detail: "Recorremos 210 km y contamos 2 h 15 más el acceso y el parking en Granada.", link: maps("Córdoba to Granada") },
-      { time: "19:00", title: "Mirador de San Nicolás", detail: "Vemos por primera vez la Alhambra. Si está lleno, seguimos hasta San Miguel Bajo o la Placeta de Carvajales.", link: maps("Mirador de San Nicolás Granada") }
+      { time: "18:00", title: "Hacemos el check-in y pateamos el centro", detail: "Dejamos el equipaje y damos un primer paseo por la Catedral, la Alcaicería y las plazas del centro.", link: maps("Centro histórico Granada") },
+      { time: "21:00", title: "Cenamos por el centro", detail: "Entramos en un par de barras y probamos las tapas incluidas con la bebida sin convertir la noche en una maratón.", link: maps("Bodegas Castañeda Granada") }
     ]
   },
   {
@@ -78,11 +80,10 @@ const tripDays = [
     summary: "Este es nuestro día más importante para reservar. La hora exacta de Palacios Nazaríes manda y organizamos el resto del recinto alrededor de ella.",
     tags: ["Alhambra", "Albaicín", "Tapas"],
     items: [
-      { time: "08:30", title: "Alhambra y Generalife", detail: "La hora es orientativa. Llegamos 60 min antes de Palacios Nazaríes y llevamos la documentación.", link: "https://tickets.alhambra-patronato.es/" },
-      { time: "14:00", title: "Almuerzo y pausa", detail: "Bajamos al centro o reservamos Damasqueros si queremos una comida más especial.", link: maps("Damasqueros Granada") },
+      { time: "09:00", title: "Visitamos la Alhambra y el Generalife", detail: "Llegamos 60 min antes de nuestra hora de Palacios Nazaríes y llevamos la documentación.", link: "https://tickets.alhambra-patronato.es/" },
+      { time: "14:00", title: "Comemos cocina granadina", detail: "Bajamos al centro y elegimos un sitio de producto local; reservamos Damasqueros si queremos una comida más especial.", link: maps("Damasqueros Granada") },
       { time: "16:30", title: "Catedral + Capilla Real", detail: "Elegimos una visita de interior después de una mañana larga.", link: maps("Catedral de Granada") },
-      { time: "18:30", title: "Albaicín y Sacromonte", detail: "Subimos sin una ruta rígida por la Carrera del Darro, el Paseo de los Tristes y las cuevas.", link: maps("Paseo de los Tristes Granada") },
-      { time: "21:00", title: "Ruta corta de tapas", detail: "Entramos en dos o tres barras, no seis. Tomamos Bodegas Castañeda y Casa Torcuato como referencias.", link: maps("Bodegas Castañeda Granada") }
+      { time: "20:00", title: "Tapeamos por el Albaicín", detail: "Subimos por la Carrera del Darro y el Paseo de los Tristes, vemos la Alhambra al atardecer y cenamos de tapas por el barrio.", link: maps("Albaicín Granada tapas") }
     ]
   },
   {
@@ -90,37 +91,34 @@ const tripDays = [
     summary: "Hacemos de Baeza nuestra base. La almazara es el eje del día y, como Úbeda está a solo 10 km, visitamos las dos ciudades con calma y volvemos a dormir en Baeza.",
     tags: ["Almazara", "Baeza + Úbeda", "AOVE"],
     items: [
-      { time: "08:15", title: "Granada → Baeza", detail: "Recorremos unos 140 km en 1 h 45 y dejamos margen suficiente para la visita reservada.", link: maps("Granada to Baeza") },
+      { time: "08:00", title: "Granada → Baeza", detail: "Recorremos unos 140 km en 1 h 45 y dejamos margen suficiente para la visita reservada.", link: maps("Granada to Baeza") },
       { time: "10:30", title: "Visitamos la almazara", detail: "Confirmamos la dirección y la duración, y reservamos 15 minutos para llegar y aparcar entre olivares.", link: maps("Almazara Baeza") },
-      { time: "12:45", title: "Descubrimos Baeza monumental", detail: "Recorremos la plaza del Pópulo, la Catedral, la Fuente de Santa María y las antiguas universidades.", link: "https://turismo.baeza.net/" },
-      { time: "14:30", title: "Comemos con AOVE", detail: "Elegimos Canela en Rama o La Barbería y preguntamos por los aceites de cada variedad.", link: maps("Canela en Rama Baeza") },
-      { time: "16:45", title: "Visitamos lo esencial de Úbeda", detail: "Vemos la plaza Vázquez de Molina, la Sacra Capilla del Salvador y el mirador del Salvador.", link: "https://www.turismodeubeda.com/" },
-      { time: "19:30", title: "Volvemos a Baeza", detail: "Regresamos al alojamiento, descansamos y cenamos sin prisas cerca del centro histórico.", link: maps("Centro histórico Baeza") }
+      { time: "13:00", title: "Paseamos por Baeza y comemos", detail: "Recorremos la plaza del Pópulo, la Catedral, la Fuente de Santa María y las antiguas universidades antes de comer con AOVE.", link: "https://turismo.baeza.net/" },
+      { time: "17:00", title: "Visitamos Úbeda", detail: "Vemos la plaza Vázquez de Molina, la Sacra Capilla del Salvador y el mirador del Salvador.", link: "https://www.turismodeubeda.com/" },
+      { time: "20:00", title: "Volvemos a Baeza y cenamos", detail: "Regresamos al alojamiento y cenamos sin prisas cerca del centro histórico.", link: maps("Centro histórico Baeza") }
     ]
   },
   {
     id: 9, date: "11", weekday: "Dom", city: "Manzanares", sleep: "Manzanares", theme: "Carretera y descanso",
-    summary: "Después de varios días intensos, nos tomamos la jornada con calma: desayunamos sin prisa en Baeza, conducimos hasta Manzanares y dedicamos la tarde a descansar.",
+    summary: "Después de varios días intensos, desayunamos, hacemos el check-out y conducimos directamente a Manzanares. Allí tomamos el aperitivo en El Menano, comemos y dejamos el resto del día libre.",
     tags: ["2 h 15 de coche", "Sin visitas", "Descanso"],
     items: [
-      { time: "09:30", title: "Desayunamos sin prisa en Baeza", detail: "Empezamos tarde y disfrutamos de una mañana tranquila antes de preparar el equipaje.", link: maps("Desayuno Baeza") },
-      { time: "11:30", title: "Descansamos y hacemos el check-out", detail: "Dejamos la mañana libre, sin monumentos ni horarios que cumplir.", link: maps("Baeza") },
-      { time: "13:30", title: "Comemos algo sencillo", detail: "Elegimos una comida ligera para conducir cómodos durante la tarde.", link: maps("Restaurantes Baeza") },
-      { time: "15:00", title: "Baeza → Manzanares", detail: "Recorremos unos 190 km en 2 h 15 y hacemos una pausa si la necesitamos.", link: maps("Baeza to Manzanares") },
-      { time: "18:00", title: "Llegamos y descansamos", detail: "Hacemos el check-in y dejamos la tarde totalmente libre en el alojamiento.", link: maps("Manzanares") },
+      { time: "09:30", title: "Desayunamos y hacemos el check-out", detail: "Empezamos sin prisas, preparamos el equipaje y dejamos Baeza después del desayuno.", link: maps("Desayuno Baeza") },
+      { time: "10:30", title: "Baeza → Manzanares", detail: "Recorremos unos 190 km en 2 h 15 y hacemos una pausa si la necesitamos.", link: maps("Baeza to Manzanares") },
+      { time: "13:00", title: "Tomamos el aperitivo en El Menano", detail: "Llegamos a Manzanares y hacemos nuestra primera parada en esta taberna local.", link: maps("El Menano Manzanares") },
+      { time: "14:30", title: "Comemos en Manzanares", detail: "Elegimos un sitio cercano y después dejamos la tarde libre para descansar.", link: maps("Restaurantes Manzanares") },
       { time: "20:30", title: "Cenamos cerca del alojamiento", detail: "Si nos apetece, pedimos pisto, migas o cordero; si no, optamos por algo ligero y descansamos.", link: "https://paradores.es/es/restaurante-del-parador-de-manzanares" }
     ]
   },
   {
     id: 10, date: "12", weekday: "Lun", city: "Madrid", sleep: "Madrid / regreso", theme: "Último día de descanso",
-    summary: "Cerramos la ruta sin visitas programadas: descansamos, comemos con calma y conducimos directamente a Madrid.",
+    summary: "Cerramos la ruta sin visitas programadas: desayunamos en Manzanares, conducimos directamente a Madrid, llegamos al piso y comemos en La Tagliatella.",
     tags: ["2 h de coche", "Sin visitas", "Final tranquilo"],
     items: [
-      { time: "09:30", title: "Desayunamos tranquilamente", detail: "Empezamos el último día sin despertador temprano ni una agenda de visitas.", link: maps("Desayuno Manzanares") },
-      { time: "11:30", title: "Descansamos y hacemos el check-out", detail: "Dejamos tiempo para preparar el equipaje y salir con calma.", link: maps("Manzanares") },
-      { time: "13:00", title: "Comemos sin prisas", detail: "Elegimos algo sencillo antes de iniciar el último tramo por carretera.", link: maps("Restaurantes Manzanares") },
-      { time: "15:00", title: "Manzanares → Madrid", detail: "Recorremos unos 175 km en 2 horas y dejamos margen adicional si tenemos una hora límite.", link: maps("Manzanares to Madrid") },
-      { time: "17:30", title: "Llegamos y descansamos", detail: "Entregamos el coche o vamos al hotel o la estación, manteniendo el resto del día libre.", link: maps("Madrid") }
+      { time: "09:30", title: "Desayunamos tranquilamente", detail: "Empezamos el último día sin una agenda de visitas y preparamos el equipaje.", link: maps("Desayuno Manzanares") },
+      { time: "11:00", title: "Manzanares → Madrid", detail: "Recorremos unos 175 km en 2 horas y dejamos margen adicional si encontramos tráfico.", link: maps("Manzanares to Madrid") },
+      { time: "14:00", title: "Llegamos al piso", detail: "Dejamos el equipaje y nos instalamos antes de salir a comer.", link: maps("Madrid") },
+      { time: "15:00", title: "Comemos en La Tagliatella", detail: "Terminamos el itinerario con una comida tranquila y dejamos libre el resto del día.", link: maps("La Tagliatella Madrid") }
     ]
   }
 ];
@@ -140,11 +138,11 @@ const mapNodes = [
 ];
 
 const bookings = [
-  { id:"alhambra", status:"Prioridad máxima", title:"Alhambra · 9 oct", detail:"Compramos la entrada oficial con hora de Palacios Nazaríes y llevamos el documento original.", url:"https://tickets.alhambra-patronato.es/" },
-  { id:"giralda", status:"Reservar", title:"Catedral + Giralda · 5 oct", detail:"Elegimos una franja de tarde según nuestra llegada desde Ronda.", url:"https://www.catedraldesevilla.es/" },
-  { id:"alcazar", status:"Reservar", title:"Real Alcázar · 6 oct", detail:"Elegimos la primera franja del día y evitamos portales que imiten la web oficial.", url:"https://www.alcazarsevilla.org/" },
-  { id:"mezquita", status:"Reservar", title:"Mezquita-Catedral · 7 oct", detail:"Reservamos la visita general con hora concreta desde el canal oficial.", url:"https://mezquita-catedraldecordoba.es/" },
-  { id:"almazara", status:"Confirmar", title:"Almazara · 10 oct", detail:"Anotamos aquí la hora, la dirección y el teléfono de nuestra visita en Baeza.", url:maps("Almazaras cerca de Baeza") },
+  { id:"alhambra", status:"Prioridad máxima", title:"Alhambra · 9 oct", detail:"Reservamos la entrada para las 09:00, comprobamos la hora exacta de Palacios Nazaríes y llevamos el documento original.", url:"https://tickets.alhambra-patronato.es/" },
+  { id:"giralda", status:"Reservar", title:"Catedral + Giralda · 5 oct", detail:"Elegimos la franja de las 12:00 para enlazar la visita con nuestra llegada desde Ronda.", url:"https://www.catedraldesevilla.es/" },
+  { id:"alcazar", status:"Reservar", title:"Real Alcázar · 6 oct", detail:"Elegimos la primera franja del día, a las 09:00, y evitamos portales que imiten la web oficial.", url:"https://www.alcazarsevilla.org/" },
+  { id:"mezquita", status:"Reservar", title:"Mezquita-Catedral · 7 oct", detail:"Reservamos la visita general de las 11:15 desde el canal oficial.", url:"https://mezquita-catedraldecordoba.es/" },
+  { id:"almazara", status:"Confirmar", title:"Almazara · 10 oct", detail:"Confirmamos la visita de las 10:30 y anotamos la dirección y el teléfono de la almazara.", url:maps("Almazaras cerca de Baeza") },
   { id:"hoteles", status:"Ya organizado", title:"Alojamientos", detail:"Tenemos los hoteles confirmados del 3 al 10; revisamos el parking y el check-in tardío.", url:"#plan" }
 ];
 
@@ -183,6 +181,7 @@ const restaurants = [
   { city:"Baeza", meal:"Comida", name:"Palacio de Gallego", why:"Elegimos una opción tranquila para disfrutar de cocina de la zona en un edificio con historia.", order:"Pedimos pipirrana, carnes y alguna especialidad de temporada", price:"€€", query:"Palacio de Gallego Baeza" },
   { city:"Manzanares", meal:"Cena", name:"Parador de Manzanares", why:"Cenamos cocina regional en una opción cómoda para nuestra jornada de carretera.", order:"Pedimos pisto, migas, gachas o cordero manchego", price:"€€", query:"Parador de Manzanares restaurante" },
   { city:"Manzanares", meal:"Cena", name:"Castillo de Pilas Bonas", why:"Cenamos en un castillo restaurado y disfrutamos especialmente del ambiente.", order:"Elegimos cocina manchega y carnes", price:"€€", query:"Restaurante Castillo Pilas Bonas Manzanares" },
+  { city:"Manzanares", meal:"Comida", name:"El Menano", why:"Paramos aquí para nuestro aperitivo al llegar a Manzanares, tal como lo hemos apuntado en el plan.", order:"Pedimos una bebida y alguna tapa para compartir", price:"€", query:"El Menano Manzanares" },
   { city:"Manzanares", meal:"Comida", name:"Viri Viri", why:"Paramos en un bar local sin pretensiones para una comida sencilla con raciones.", order:"Pedimos pisto con huevo y carne a la brasa", price:"€", query:"Bar Barbacoa Viri Viri Manzanares" }
 ];
 
